@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+:root {
+    --main-color: #1e90ff; /* Warna biru terang untuk aksen */
+    --secondary-color: #00a0b5; /* Warna ungu bercahaya */
+    --background-color: linear-gradient(135deg, #212534, #090a12); /* Gradasi luar angkasa */
+    --text-color: #fff; /* Warna teks utama */
+    --subtext-color: #dcdcdc; /* Warna abu lembut untuk teks */
+    --bg-color: linear-gradient(135deg, #090a12, #212534); /* Gradasi luar angkasa */  
+}
+
+body {
+    background: var(--background-color); /* Warna latar belakang solid */
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Untuk membuat konten diatur dengan fleksibel */
+    justify-content: center; /* Menyusun konten di tengah secara horizontal */
+    align-items: center; /* Menyusun konten di tengah secara vertikal */
+    min-height: 100vh; /* Memastikan tinggi badan penuh layar */
+    text-align: center; /* Teks berada di tengah */
+}
+
+.home .content {
+    background: var(--bg-color);
+    max-width: 400px; /* Mengurangi lebar kotak agar lebih pas di layar */
+    padding: 20px 30px; /* Menyesuaikan padding untuk ruang dalam tetap nyaman */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px var(--secondary-color);
+    margin: 20px; /* Memberikan jarak luar untuk memastikan kotak terlihat penuh */
+    width: 100%;
+
+}
+
+.home .content h3 {
+    font-size: 1.8rem; /* Membuat ukuran font lebih besar */
+    color: var(--text-color);
+    margin: 1rem 0; /* Memberi jarak vertikal antara judul dan elemen lainnya */
+}
+
+
+
+
+
+/* .home .content .info {
+    font-size: 1rem;
+    color: var(--text-color);
+} */
+
+.home .content .text {
+    font-size: 0.9rem; /* Meningkatkan ukuran font untuk visibilitas lebih baik */
+    color: var(--subtext-color);
+    margin: 1rem 0; /* Memberikan ruang vertikal lebih besar */
+    line-height: 1.6; /* Menambah spasi antar baris untuk visibilitas */
+}
+
+
+
+.btn {
+    display: inline-block;
+    margin: 1.5rem auto 0; /* Menambah jarak atas pada tombol */
+    padding: 0.6rem 2rem; /* Memperkecil ukuran tombol */
+    background: var(--main-color);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 15px var(--main-color);
+    animation: pulse 2s infinite; /* Menambahkan animasi pulse */
+    transition: transform 0.3s ease, background 0.3s ease; /* Menambahkan transisi */
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    animation: glow 1.5s infinite; /* Menambahkan animasi glow saat hover */
+    transform: translateY(-3px); /* Efek melompat saat dihover */
+}
+
+/* Animasi pulse pada tombol */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--main-color);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px var(--main-color);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--main-color);
+    }
+}
+
+/* Animasi glow saat hover */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px var(--secondary-color);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--secondary-color);
+    }
+    100% {
+        box-shadow: 0 0 10px var(--secondary-color);
+    }
+}
+
+.home .content img {
+    height: auto; /* Memastikan gambar proporsional */
+    width: 30%; /* Menyesuaikan lebar gambar */
+    object-fit: cover;
+    border: 0.2rem solid var(--text-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 0rem 1rem var(--secondary-color);
+    margin: 1rem 0; /* Menambah jarak atas dan bawah untuk gambar */
+}
+
+.home h3 span {
+    color: var(--main-color);
+    transition: letter-spacing 0.3s ease, color 0.3s ease; /* Tambahkan transisi */
+}
+
+.home h3 span:hover {
+    color: var(--secondary-color);
+    letter-spacing: 0.2rem;
+    text-shadow : 0 0 20px var(--secondary-color);
+}
+
